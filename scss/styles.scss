@@ -1,29 +1,21 @@
-// ## Layout
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-// The designs were created to the following widths:
+// Color variables
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
 
-// - Mobile: 375px
-// - Desktop: 1440px
+// Global resets
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-// ## Colors
-
-// ### Primary
-
-// - Cyan: hsl(179, 62%, 43%)
-// - Bright Yellow: hsl(71, 73%, 54%)
-
-// ### Neutral
-
-// - Light Gray: hsl(204, 43%, 93%)
-// - Grayish Blue: hsl(218, 22%, 67%)
-
-// ## Typography
-
-// ### Body Copy
-
-// - Font size: 16px
-
-// ### Font
-
-// - Family: [Karla](https://fonts.google.com/specimen/Karla)
-// - Weights: 400, 700
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+}
