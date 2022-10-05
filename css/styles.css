@@ -8,4 +8,40 @@
 
 body {
   font-size: 1rem;
-  font-family: "Karla", sans-serif; }
+  font-family: "Karla", sans-serif;
+  background-color: #e5eff5;
+  min-height: 100vh;
+  display: grid;
+  place-content: center; }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "intro intro" "price why-us";
+  max-width: 40rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); }
+
+section {
+  padding: 2.5rem; }
+  section.intro {
+    grid-area: intro;
+    background-color: white; }
+    section.intro h1 {
+      color: #2cb5b2;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem; }
+    section.intro h3 {
+      color: #c0df34;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem; }
+    section.intro p {
+      line-height: 1.6;
+      color: #98a6bd; }
+  section.price {
+    grid-area: price; }
+  section.why-us {
+    grid-area: why-us; }
