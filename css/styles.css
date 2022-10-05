@@ -17,8 +17,8 @@ body {
 main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "intro intro" "price why-us";
-  max-width: 40rem;
+  grid-template-areas: "intro intro" "subscription why-us";
+  max-width: 42rem;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15); }
@@ -29,19 +29,76 @@ section {
     grid-area: intro;
     background-color: white; }
     section.intro h1 {
-      color: #2cb5b2;
+      color: #2ab2af;
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1.5rem; }
     section.intro h3 {
       color: #c0df34;
+      margin-bottom: 0.7rem;
       font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.7rem; }
+      font-weight: 700; }
     section.intro p {
       line-height: 1.6;
       color: #98a6bd; }
-  section.price {
-    grid-area: price; }
+  section.subscription {
+    grid-area: subscription;
+    background-color: #2ab2af;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    align-content: space-between; }
+    section.subscription h2 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 700; }
+    section.subscription .price {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 0.8rem;
+      align-items: center; }
+      section.subscription .price__number {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700; }
+      section.subscription .price__text {
+        color: #9edfe0; }
+    section.subscription p {
+      color: white; }
+    section.subscription a {
+      display: inline-block;
+      width: 100%;
+      padding: 0.7rem 0;
+      text-align: center;
+      background-color: #c0df34;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.3rem;
+      box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.2);
+      margin-top: 1.5rem;
+      transition: all 0.1s ease-in; }
+      section.subscription a:hover {
+        box-shadow: none;
+        transform: scale(0.99);
+        background-color: #b7d822; }
   section.why-us {
-    grid-area: why-us; }
+    grid-area: why-us;
+    background-color: #4bbebc; }
+    section.why-us h2 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 700; }
+    section.why-us ul {
+      list-style-type: none;
+      color: #e5eff5;
+      line-height: 1.4;
+      font-size: 0.9rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important; } }
