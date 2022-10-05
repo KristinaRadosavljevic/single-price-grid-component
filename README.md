@@ -11,7 +11,6 @@ This is a solution to the [Single price grid component challenge on Frontend Men
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -30,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [See the code on GitHub]()
-- Live Site URL: [View live site]()
+- Solution URL: [See the code on GitHub](https://github.com/KristinaRadosavljevic/single-price-grid-component)
+- Live Site URL: [View live site](https://single-price-grid-component-weld-mu.vercel.app/)
 
 ## My process
 
@@ -39,12 +38,26 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS/Sass
+- CSS grid
 
 ### What I learned
 
-### Continued development
+In this challenge, I got to practice using CSS grid in multiple situations. I also found an opportunity to try using Sass mixins, with both mandatory and optional arguments, as in the following code snippet:
+
+```scss
+@mixin secondary-heading($color, $margin: 1rem) {
+  color: $color;
+  margin-bottom: $margin;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+```
+
+This proved very useful in terms of code reusability as I used this mixin with the `@include` statement in three declarations.
 
 ### Useful resources
+
+I used [this article](https://sass-lang.com/documentation/at-rules/mixin) to help me understand how mixins work and how they're declared in the code.
 
 ## Author
 

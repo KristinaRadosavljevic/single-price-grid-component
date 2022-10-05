@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+// Color variables
+$cyan: hsl(179, 62%, 43%);
+$medium-cyan: hsl(179, 47%, 52%);
+$light-cyan: hsl(181, 52%, 75%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+$white: hsl(0, 0%, 100%);
+
+// Mixins
+@mixin secondary-heading($color, $margin: 1rem) {
+  color: $color;
+  margin-bottom: $margin;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+// Global resets
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background-color: $light-gray;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 1.5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 42rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+section {
+  padding: 2.5rem;
+
+  &.intro {
+    grid-column: span 2;
+    background-color: $white;
+
+    h1 {
+      color: $cyan;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      @include secondary-heading($bright-yellow, 0.7rem);
+    }
+
+    p {
+      line-height: 1.6;
+      color: $grayish-blue;
+    }
+  }
+
+  &.subscription {
+    background-color: $cyan;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    align-content: space-between;
+
+    h2 {
+      @include secondary-heading($white);
+    }
+
+    .price {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 0.8rem;
+      align-items: center;
+
+      &__number {
+        color: $white;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      &__text {
+        color: $light-cyan;
+      }
+    }
+
+    p {
+      color: $white;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 0.7rem 0;
+      text-align: center;
+      background-color: $bright-yellow;
+      color: $white;
+      text-decoration: none;
+      border-radius: 0.3rem;
+      box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.2);
+      margin-top: 1.5rem;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        box-shadow: none;
+        transform: scale(0.99);
+        background-color: darken($bright-yellow, 5%);
+      }
+    }
+  }
+
+  &.why-us {
+    background-color: $medium-cyan;
+
+    h2 {
+      @include secondary-heading($white);
+    }
+
+    ul {
+      list-style-type: none;
+      color: $light-gray;
+      line-height: 1.4;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// Remove all transitions for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Media queries
+@media (max-width: 573px) {
+  main {
+    grid-template-columns: 1fr;
+    max-width: 20rem;
+  }
+
+  section {
+    padding: 2rem;
+
+    &.intro {
+      grid-column: span 1;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "single-price-grid-component",
+  "version": "1.0.0",
+  "description": "Single price grid component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristinaRadosavljevic/single-price-grid-component.git"
+  },
+  "author": "Kristina Radosavljevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristinaRadosavljevic/single-price-grid-component/issues"
+  },
+  "homepage": "https://github.com/KristinaRadosavljevic/single-price-grid-component#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
