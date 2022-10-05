@@ -12,12 +12,12 @@ body {
   background-color: #e5eff5;
   min-height: 100vh;
   display: grid;
-  place-content: center; }
+  place-content: center;
+  padding: 1.5rem; }
 
 main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "intro intro" "subscription why-us";
   max-width: 42rem;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -26,7 +26,7 @@ main {
 section {
   padding: 2.5rem; }
   section.intro {
-    grid-area: intro;
+    grid-column: span 2;
     background-color: white; }
     section.intro h1 {
       color: #2ab2af;
@@ -42,7 +42,6 @@ section {
       line-height: 1.6;
       color: #98a6bd; }
   section.subscription {
-    grid-area: subscription;
     background-color: #2ab2af;
     display: grid;
     grid-template-columns: 1fr;
@@ -84,7 +83,6 @@ section {
         transform: scale(0.99);
         background-color: #b7d822; }
   section.why-us {
-    grid-area: why-us;
     background-color: #4bbebc; }
     section.why-us h2 {
       color: white;
@@ -102,3 +100,12 @@ section {
   *::before,
   *::after {
     transition-duration: 0.01ms !important; } }
+
+@media (max-width: 573px) {
+  main {
+    grid-template-columns: 1fr;
+    max-width: 20rem; }
+  section {
+    padding: 2rem; }
+    section.intro {
+      grid-column: span 1; } }
